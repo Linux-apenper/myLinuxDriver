@@ -1,0 +1,10 @@
+#!/bin/sh
+
+ROOT_DIR=/home/sky
+
+echo "copy the globalmem.ko to the nfs_shared directory"
+echo "delete the original globalmem.ko file."
+rm $ROOT_DIR/nfs_shared/globalfifo.ko -f
+echo "now copying."
+cp ./globalfifo.ko $ROOT_DIR/nfs_shared/
+echo "copy done"
